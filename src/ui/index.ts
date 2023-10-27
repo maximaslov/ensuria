@@ -1,2 +1,3 @@
 export { default as Flex } from "./Flex";
-export { default as InfoItem } from "./InfoItem";
+export { default as Heading } from "./Heading";
+export { default as Text } from "./Text";

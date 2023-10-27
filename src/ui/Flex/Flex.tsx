@@ -1,16 +1,14 @@
-import React, { ReactNode } from 'react'
-import { FlexBase } from './Flex.styled'
+import React from "react";
+import { FlexBase } from "./Flex.styled";
+import { FlexProps } from "./types";
 
-export interface FlexProps {
-  children?: ReactNode
-}
+const Flex: React.FC<FlexProps> = ({
+ children,
+ ...props
+}) => {
+ return (
+  <FlexBase {...props}>{children}</FlexBase>
+ );
+};
 
-const Flex: React.FC<FlexProps> = ({ children, ...props }) => {
-  return (
-    <FlexBase {...props}>
-      {children}
-    </FlexBase>
-  )
-}
-
-export default Flex
+export default Flex;
