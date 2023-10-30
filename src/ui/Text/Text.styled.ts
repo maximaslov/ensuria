@@ -22,7 +22,6 @@ const variantStyles = {
 
 const TextBase = styled.p<TextBaseProps>`
  text-align: ${({ $textAlign }) => $textAlign};
-
  color: ${({ $color }) => `var(--color-${$color})`};
  ${({ $variant }) =>
   $variant &&
@@ -30,6 +29,9 @@ const TextBase = styled.p<TextBaseProps>`
   css`
    ${variantStyles[$variant]}
   `};
+ font-size: ${({ $fontSize }) => $fontSize};
+ line-height: ${({ $lineHeight }) => $lineHeight};
+ font-weight: ${({ $fontWeight }) => $fontWeight};
 `;
 
 export default TextBase;

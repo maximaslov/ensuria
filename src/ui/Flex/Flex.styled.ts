@@ -11,24 +11,18 @@ export const FlexBase = styled.div<FlexStyledProps>`
  max-width: ${({ $maxWidth }) => $maxWidth};
  min-width: ${({ $minWidth }) => $minWidth};
  height: ${({ $height }) => $height};
- flex-direction: ${({ $column }) =>
-  $column && "column"};
- justify-content: ${({ $justifyContent }) =>
-  $justifyContent};
+ flex-direction: ${({ $column }) => $column && "column"};
+ justify-content: ${({ $justifyContent }) => $justifyContent};
  align-items: ${({ $alignItems }) => $alignItems};
  flex-wrap: ${({ $wrap }) => $wrap && "wrap"};
  padding: ${({ $padding, $px, $py }) =>
-  $padding ||
-  ($px && `0 ${$px}`) ||
-  ($py && `${$py} 0`)};
+  $padding || ($px && `0 ${$px}`) || ($py && `${$py} 0`)};
  padding-left: ${({ $pl }) => $pl};
  padding-right: ${({ $pr }) => $pr};
  padding-bottom: ${({ $pb }) => $pb};
  padding-top: ${({ $pt }) => $pt};
  margin: ${({ $margin, $mx, $my }) =>
-  $margin ||
-  ($mx && `0 ${$mx}`) ||
-  ($my && `${$my} 0`)};
+  $margin || ($mx && `0 ${$mx}`) || ($my && `${$my} 0`)};
  margin-left: ${({ $ml }) => $ml};
  margin-right: ${({ $mr }) => $mr};
  margin-bottom: ${({ $mb }) => $mb};
@@ -43,4 +37,8 @@ export const FlexBase = styled.div<FlexStyledProps>`
  z-index: ${({ $zIndex }) => $zIndex};
  gap: ${({ $gap }) => $gap};
  flex: ${({ $flex }) => $flex};
+ border-radius: ${({ $borderRadius }) => $borderRadius};
+ overflow: ${({ $overflow }) => $overflow};
+ flex-direction: ${({ $flexDirection}) => $flexDirection};
+ scroll-behavior: smooth;
 `;

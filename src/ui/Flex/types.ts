@@ -48,4 +48,7 @@ export interface FlexProps {
  $zIndex?: string;
  $gap?: string;
  $flex?: string;
+ $borderRadius?: string;
+ $flexDirection?: string;
+ className?: string;
 }
