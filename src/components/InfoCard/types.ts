@@ -4,6 +4,8 @@ export interface InfoCardProps {
  text?: string;
  secondText?: string;
  image?: string;
+ chart?: string;
+ surfaceImage?: string;
  $withCutCorner?: boolean;
  $variant?: "top" | "bottom";
  $isLarge?: boolean;

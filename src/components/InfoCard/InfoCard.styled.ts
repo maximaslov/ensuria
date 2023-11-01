@@ -23,7 +23,8 @@ export const InfoCardWrapper = styled.div<InfoCardWrapperProps>`
  display: flex;
  position: relative;
  border-radius: 6px;
- overflow: hidden;
+ overflow: ${({ image, $withCutCorner }) =>
+  image || $withCutCorner ? "hidden" : "visible"};
  justify-content: space-between;
  background-color: ${({ color }) => color};
  flex-direction: column;
@@ -46,10 +47,13 @@ export const InfoCardWrapper = styled.div<InfoCardWrapperProps>`
     left: -18px;
     top: -24px;
     height: 60px;
-    width: 42px;
+    width: 41px;
     background-color: white;
     z-index: 1;
     transform: rotate(45deg);
+    @media screen and (max-width: 580px) {
+     width: 4vw;
+    }
    }
-  `}
+  `};
 `;

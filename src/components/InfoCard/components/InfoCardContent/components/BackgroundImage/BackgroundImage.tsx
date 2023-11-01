@@ -1,10 +1,7 @@
 import Image from "next/image";
+import { BackgroundImageProps } from "./types";
 
-interface InfoCardImageProps {
- image: string;
-}
-
-const InfoCardImage: React.FC<InfoCardImageProps> = ({ image }) => {
+const BackgroundImage: React.FC<BackgroundImageProps> = ({ image }) => {
  return (
   <Image
    src={image}
@@ -17,4 +14,4 @@ const InfoCardImage: React.FC<InfoCardImageProps> = ({ image }) => {
  );
 };
 
-export default InfoCardImage;
+export default BackgroundImage;

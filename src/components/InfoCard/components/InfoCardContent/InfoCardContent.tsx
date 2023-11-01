@@ -1,20 +1,16 @@
-'use client'
+"use client";
 
 import { Flex, Heading, Text } from "@/ui";
-import { InfoCardImage } from ".";
-
-interface InfoCardContentProps {
- title?: string;
- text?: string;
- secondText?: string;
- image?: string;
-}
+import { InfoCardContentProps } from "./types";
+import { BackgroundImage, ChartImage, SurfaceImage } from "./components";
 
 const InfoCardContent: React.FC<InfoCardContentProps> = ({
  title,
  text,
  secondText,
  image,
+ chart,
+ surfaceImage,
 }) => {
  return (
   <>
@@ -31,7 +27,9 @@ const InfoCardContent: React.FC<InfoCardContentProps> = ({
      )}
     </Flex>
    )}
-   {image && <InfoCardImage image={image} />}
+   {image && <BackgroundImage image={image} />}
+   {chart && <ChartImage image={chart} />}
+   {surfaceImage && <SurfaceImage image={surfaceImage} />}
   </>
  );
 };

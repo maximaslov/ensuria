@@ -1,6 +1,6 @@
+import { Flex } from "@/ui";
 import { InfoCardWrapper } from "./InfoCard.styled";
-import { Flex, Heading, Text } from "../../ui";
-import { InfoCardContent, InfoCardImage } from "./components";
+import { InfoCardContent } from "./components";
 import { InfoCardProps } from "./types";
 
 const InfoCard: React.FC<InfoCardProps> = ({
@@ -8,6 +8,8 @@ const InfoCard: React.FC<InfoCardProps> = ({
  text,
  secondText,
  image,
+ chart,
+ surfaceImage,
  $isLarge,
  $variant,
  $isDoubleSize,
@@ -15,12 +17,13 @@ const InfoCard: React.FC<InfoCardProps> = ({
  color,
  ...props
 }) => {
-
  const contentData = {
   title,
   text,
   secondText,
   image,
+  chart,
+  surfaceImage,
  };
 
  if (!text && !title && !image && !$isEmpty) {
@@ -36,6 +39,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
     $isLarge={$isLarge}
     $variant={$variant}
     $isDoubleSize={$isDoubleSize}
+    image={image}
     {...(!image && { color })}
     {...props}
    >

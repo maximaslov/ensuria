@@ -1,5 +1,10 @@
+import { About, Compensation } from "@/sections";
+
 export default function Home() {
-  return (
-    <h2>Hello</h2>
-  )
+ return (
+  <main>
+   <About />
+   <Compensation />
+  </main>
+ );
 }
