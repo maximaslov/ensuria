@@ -1,7 +1,7 @@
 import { Flex } from "@/ui";
 import { InfoCardWrapper } from "./InfoCard.styled";
-import { InfoCardContent } from "./components";
 import { InfoCardProps } from "./types";
+import InfoCardContent from "./InfoCardContent";
 
 const InfoCard: React.FC<InfoCardProps> = ({
  title,

@@ -1,16 +1,20 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 import { BASE_URL } from "./apiConfig";
-import { GetCardsResponse, GetPicturesResponse, GetTextResponse } from "./apiTypes";
+import {
+ GetCardsResponse,
+ GetPicturesResponse,
+ GetTextResponse,
+} from "./apiTypes";
 
 export const api = createApi({
  reducerPath: "ensuriaApi",
  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
  extractRehydrationInfo(action, { reducerPath }) {
-    if (action.type === HYDRATE) {
-      return action.payload[reducerPath]
-    }
-  },
+  if (action.type === HYDRATE) {
+   return action.payload[reducerPath];
+  }
+ },
  endpoints: (builder) => ({
   getTextContent: builder.query<GetTextResponse, void>({
    query: () => "1",
@@ -24,7 +28,9 @@ export const api = createApi({
  }),
 });
 
-export default api
+export default api;
 
 export const { useGetTextContentQuery, useGetCardsQuery, useGetPicturesQuery } =
  api;
+
+export const { getTextContent, getCards, getPictures } = api.endpoints;

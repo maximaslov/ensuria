@@ -5,7 +5,7 @@ export interface Data {
  className: string;
  animation: AnimationConfig;
  styles: StylesConfig;
-};
+}
 
 export interface AnimationItemsProps {
  size: any;
@@ -16,10 +16,10 @@ export interface AnimationItemsProps {
 }
 
 export interface AnimateItem {
-    component: any;
-    image?: string;
-    size: Size;
-    data: Data;
-    isImage?: boolean;
-    text?: string;
-   }
+ component: any;
+ image?: string;
+ size: Size;
+ data: Data;
+ isImage?: boolean;
+ text?: string;
+}

@@ -1,3 +1,8 @@
+export enum InfoCardVariant {
+ Top = "top",
+ Bottom = "bottom",
+}
+
 export interface InfoCardProps {
  color?: string;
  title?: string;
@@ -7,7 +12,7 @@ export interface InfoCardProps {
  chart?: string;
  surfaceImage?: string;
  $withCutCorner?: boolean;
- $variant?: "top" | "bottom";
+ $variant?: InfoCardVariant;
  $isLarge?: boolean;
  $isDoubleSize?: boolean;
  $isEmpty?: boolean;

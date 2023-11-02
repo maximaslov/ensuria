@@ -1,16 +1,18 @@
-import { Picture } from "@/store/api/apiTypes";
+import { GetPicturesResponse, Picture } from "@/store/api/apiTypes";
+
+export interface CompensationProps {
+ animationData: GetPicturesResponse;
+}
+
+interface Animation {
+ scale: number;
+ rotation: number;
+ opacity: number;
+}
 
 export interface AnimationConfig {
- from: {
-  scale: number;
-  rotation: number;
-  opacity: number;
- };
- to: {
-  scale: number;
-  rotation: number;
-  opacity: number;
- };
+ from: Animation;
+ to: Animation;
 }
 
 export interface StylesConfig {

@@ -1,10 +1,11 @@
 "use client";
 
 import { Flex } from "@/ui";
-import { LinkButtons } from "./components";
 import { AnimatedInfo, CompensationContent } from "./blocks";
+import LinkButtons from "./LinkButtons";
+import { CompensationProps } from "./types";
 
-const Compensation: React.FC = () => {
+const Compensation: React.FC<CompensationProps> = ({ animationData }) => {
  return (
   <section style={{ position: "relative" }}>
    <Flex $pt="13.056vw" $pb="23.193vw" $justifyContent="center">
@@ -20,7 +21,7 @@ const Compensation: React.FC = () => {
      <LinkButtons />
     </Flex>
    </Flex>
-   <AnimatedInfo />
+   <AnimatedInfo animationData={animationData} />
   </section>
  );
 };

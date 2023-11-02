@@ -1,4 +1,9 @@
-export type Size = "sm" | "md" | "lg" | "xl";
+export enum Size {
+    Small = "sm",
+    Medium = "md",
+    Large = "lg",
+    ExtraLarge = "xl",
+  }
 
 export interface PersonImageProps {
  size: Size;

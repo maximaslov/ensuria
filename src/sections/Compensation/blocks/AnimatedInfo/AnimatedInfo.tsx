@@ -1,15 +1,11 @@
-'use client'
+"use client";
 
-import { useGetPicturesQuery } from "@/store/api";
 import { getItemsList } from "../../compensationDefinitions";
 import AnimationItems from "./AnimationItems";
+import { AnimationInfoProps } from "./types";
 
-const AnimatedInfo: React.FC = () => {
- const { data } = useGetPicturesQuery();
-
- if (!data) return null;
-
- const { pictures } = data || {};
+const AnimatedInfo: React.FC<AnimationInfoProps> = ({ animationData }) => {
+ const { pictures } = animationData;
 
  const itemsList = getItemsList(pictures);
 

@@ -1,10 +1,5 @@
-import { About, Compensation } from "@/sections";
+import { Main } from "@/sections";
 
 export default function Home() {
- return (
-  <main>
-   <About />
-   <Compensation />
-  </main>
- );
+ return <Main />;
 }
