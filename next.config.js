@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+ compiler: {
+  // Enables the styled-components SWC transform
+  styledComponents: true,
+ },
+ images: {
+  domains: ["media.istockphoto.com", "images.unsplash.com", "app.ensuria.com"],
+ },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
